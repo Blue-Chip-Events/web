@@ -1,57 +1,27 @@
 ---
+import Footer from "../components/footer.astro"
+import Head from "../components/head.astro"
+import Logo from "../components/logo.astro"
+import Address from "../components/sections/address.astro"
+import Intro from "../components/sections/intro.astro"
+import Plug from "../components/sections/plug.astro"
 import "../styles/global.css"
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <title>Blue Chip Events</title>
-  </head>
+  <Head />
   <body class="min-h-screen flex flex-col pl-16 pt-14">
     <main class="flex flex-col w-md gap-6">
-      <img src="/logo.svg" alt="Blue Chip Events Logo" class="w-40 h-auto" />
+      <Logo />
+
       <article class="flex flex-col gap-4">
-        <p class="font-light">
-          Blue Chip Events is a new event management company organizing blockchain conferences in
-          Finland. We let our event brands do the talking.
-        </p>
-        <p class="font-light">
-          We're currently working on our first event for 2026, which will be announced in Helsinki
-          during the Slush week: <a
-            href="https://luma.com/v1xuyvsr"
-            target="_blank"
-            class="font-normal text-[#4148C8] hover:underline"
-            rel="noopener noreferrer">RSVP on Luma!</a
-          >.
-        </p>
+        <Intro />
+        <Plug />
       </article>
 
-      <address class="flex flex-col gap-2 not-italic">
-        <div class="flex flex-col">
-          <strong>CEO</strong>
-          <a
-            href="mailto:tuomas@bluechipevents.fi"
-            class="font-normal text-[#4148C8] hover:underline">tuomas@bluechipevents.fi</a
-          >
-        </div>
-        <div class="flex flex-col">
-          <strong>CTO</strong>
-          <a href="mailto:jani@bluechipevents.fi" class="font-normal text-[#4148C8] hover:underline"
-            >jani@bluechipevents.fi</a
-          >
-        </div>
-      </address>
+      <Address />
 
-      <footer class="mt-auto">
-        <span>&copy; Blue Chip Events Oy {new Date().getFullYear()}</span>
-      </footer>
+      <Footer />
     </main>
   </body>
 </html>
